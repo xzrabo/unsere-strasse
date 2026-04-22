@@ -123,8 +123,19 @@ function stopPlaylist() {
  updatePauseButton();
 }
 
+// --- Playlist Pause ---
+// Pause/Weiter für die Playlist (ohne Reset der Position)
+let playlistPaused = false;
+
+function updatePauseButton() {
+  const btn = document.getElementById('btnPlaylistPause');
+  if (!btn) return;
+  btn.textContent = playlistPaused ? '▶ Weiter' : '⏸ Pause';
+  btn.setAttribute('aria-pressed', playlistPaused ? 'true' : 'false');
+}
+
 function togglePlaylistPause() {
-  // Wenn noch nichts geladen wurde: wie Play starten
+  // Wenn noch nichts läuft: starte die Playlist
   if (!playlistAudio.src) {
     startOrResumePlaylist();
     playlistPaused = false;
@@ -133,17 +144,21 @@ function togglePlaylistPause() {
   }
 
   if (playlistAudio.paused) {
-    // Weiterlaufen lassen
+    // Weiter
     playlistPaused = false;
     playlistRunning = true;
     playlistAudio.muted = audioMuted;
     playlistAudio.play().catch(() => {});
   } else {
-    // Pausieren (ohne currentTime zurückzusetzen)
+    // Pause (ohne Reset)
     playlistPaused = true;
     playlistRunning = false;
     playlistAudio.pause();
   }
+
+  updatePauseButton();
+}
+``
 
   updatePauseButton();
 }
