@@ -82,6 +82,18 @@ let playlistIndex = 0;
 let playlistRunning = false;
 let playlistTracks = [];
 
+// --- Playlist Pause (neu) ---
+// Pause/Weiter für die Playlist (ohne Reset der Position).
+let playlistPaused = false;
+
+function updatePauseButton() {
+  const btn = document.getElementById('btnPlaylistPause');
+  if (!btn) return;
+  btn.textContent = playlistPaused ? '▶ Weiter' : '⏸ Pause';
+  btn.setAttribute('aria-pressed', playlistPaused ? 'true' : 'false');
+}
+
+
 function buildPlaylistTracks() {
  // Wenn AUDIO_PLAYLIST gepflegt ist, verwende diese.
  const fromData = (typeof AUDIO_PLAYLIST !== 'undefined' && Array.isArray(AUDIO_PLAYLIST)) ? AUDIO_PLAYLIST : [];
@@ -103,11 +115,39 @@ function buildPlaylistTracks() {
 
 function stopPlaylist() {
  playlistRunning = false;
+ playlistPaused = false;
  try {
   playlistAudio.pause();
   playlistAudio.currentTime = 0;
  } catch {}
+ updatePauseButton();
 }
+
+function togglePlaylistPause() {
+  // Wenn noch nichts geladen wurde: wie Play starten
+  if (!playlistAudio.src) {
+    startOrResumePlaylist();
+    playlistPaused = false;
+    updatePauseButton();
+    return;
+  }
+
+  if (playlistAudio.paused) {
+    // Weiterlaufen lassen
+    playlistPaused = false;
+    playlistRunning = true;
+    playlistAudio.muted = audioMuted;
+    playlistAudio.play().catch(() => {});
+  } else {
+    // Pausieren (ohne currentTime zurückzusetzen)
+    playlistPaused = true;
+    playlistRunning = false;
+    playlistAudio.pause();
+  }
+
+  updatePauseButton();
+}
+
 
 function playPlaylistAt(index) {
  if (!playlistTracks.length) playlistTracks = buildPlaylistTracks();
@@ -116,6 +156,9 @@ function playPlaylistAt(index) {
  // Bereich clampen
  playlistIndex = Math.max(0, Math.min(index, playlistTracks.length - 1));
   playlistRunning = true;
+
+ playlistPaused = false;
+ updatePauseButton();
 
  const src = playlistTracks[playlistIndex];
  playlistAudio.src = src;
@@ -131,6 +174,10 @@ function startOrResumePlaylist() {
  try { stopFinalMessageAudio(); finalMessageOpen = false; } catch {}
  // Wenn Hotspot-Musik läuft, stoppen (nicht parallel)
  try { stopHotspotAudio(); } catch {}
+
+ // Pause-Status zurücksetzen
+ playlistPaused = false;
+ updatePauseButton();
 
  if (!playlistTracks.length) playlistTracks = buildPlaylistTracks();
  if (!playlistTracks.length) {
@@ -173,6 +220,9 @@ document.getElementById('btnPlaylist')?.addEventListener('click', startOrResumeP
 document.getElementById('btnPlaylistStop')?.addEventListener('click', stopPlaylist);
 document.getElementById('btnPlaylistNext')?.addEventListener('click', nextTrack);
 document.getElementById('btnPlaylistPrev')?.addEventListener('click', prevTrack);
+// Pause-Button (optional, falls in index.html vorhanden)
+document.getElementById('btnPlaylistPause')?.addEventListener('click', togglePlaylistPause);
+updatePauseButton();
 
 // --- Audio (global) ---
 const hotspotAudio = new Audio();
