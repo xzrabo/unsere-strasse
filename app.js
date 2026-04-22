@@ -82,16 +82,6 @@ let playlistIndex = 0;
 let playlistRunning = false;
 let playlistTracks = [];
 
-// ✅ ADD: Pause-State + Helper für Button-Text
-let playlistPaused = false;
-
-function updatePauseButton() {
-  const btn = document.getElementById('btnPlaylistPause');
-  if (!btn) return;
-  btn.textContent = playlistPaused ? '▶ Weiter' : '⏸ Pause';
-  btn.setAttribute('aria-pressed', playlistPaused ? 'true' : 'false');
-}
-
 function buildPlaylistTracks() {
  // Wenn AUDIO_PLAYLIST gepflegt ist, verwende diese.
  const fromData = (typeof AUDIO_PLAYLIST !== 'undefined' && Array.isArray(AUDIO_PLAYLIST)) ? AUDIO_PLAYLIST : [];
@@ -117,32 +107,6 @@ function stopPlaylist() {
   playlistAudio.pause();
   playlistAudio.currentTime = 0;
  } catch {}
-}
-
-// ✅ ADD: Pause/Weiter umschalten (ohne Reset der Position)
-function togglePlaylistPause() {
-  // Wenn noch nichts geladen wurde: starte wie "Play"
-  if (!playlistAudio.src) {
-    startOrResumePlaylist();
-    playlistPaused = false;
-    updatePauseButton();
-    return;
-  }
-
-  if (playlistAudio.paused) {
-    // Weiterlaufen lassen
-    playlistPaused = false;
-    playlistRunning = true;            // wichtig: damit "ended" wieder weiter schalten darf
-    playlistAudio.muted = audioMuted;
-    playlistAudio.play().catch(() => {});
-  } else {
-    // Pausieren (ohne currentTime zurückzusetzen!)
-    playlistPaused = true;
-    playlistRunning = false;           // wichtig: verhindert nextTrack bei 'ended'
-    playlistAudio.pause();
-  }
-
-  updatePauseButton();
 }
 
 function playPlaylistAt(index) {
