@@ -723,7 +723,7 @@ const HOTSPOTS = [
           "Halici"
         ],
         "hint": "P+M waren mit denen schon im Urlaub",
-        "solution": "Richtig, Fam. Halici mit Önder, Ilse, Tanju und Sibel. Im Jahr 1976 haben hier Hans und Irmgart Houben (damals noch ohne Kinder) gewohnt. Irmgart hat an der Gregorschule ihr Refrendariat gemacht und Hans hatte bei Deuz in Köln gearbeitet. Ich war so stolz, dass ich die Schulhefte 'mit korrigieren' durfte, d.h. eigentlich durfte ich nur den Stempel für den Klassenspiegel dort rein machen- und dabei kannte ich dann die ein oder andere Person wie z.B. Regina Jansen vom Schwimmen... Schön, dass wir mit Houbens heute immer noch Kontakt haben und das nach nun 50 Jahren!! ",
+        "solution": "Richtig, Fam. Halici mit Önder, Ilse, Tanju und Sibel. Im Jahr 1975 haben hier Hans und Irmgart Houben (damals noch ohne Kinder) gewohnt. Irmgart hat an der Gregorschule ihr Refrendariat gemacht und Hans hatte bei Deuz in Köln gearbeitet. Ich war so stolz, dass ich die Schulhefte 'mit korrigieren' durfte, d.h. eigentlich durfte ich nur den Stempel für den Klassenspiegel dort rein machen- und dabei kannte ich dann die ein oder andere Person wie z.B. Regina Jansen vom Schwimmen... Schön, dass wir mit Houbens heute immer noch Kontakt haben und das nach nun 50 Jahren!! ",
         "revealComment": "",
         "revealImage": ""
       },
