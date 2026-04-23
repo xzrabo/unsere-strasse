@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unsere Straße – Ratespiel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="top">
+  <h1>🏡 Unsere Straße</h1>
+  <p>Klicke auf eine Fläche und beantworte die Frage.</p>
+  <div class="status">
+    <button id="btnPlaylistPrev" class="btn secondary btn-solution" type="button">⏮ Zurück</button>
+    <button id="btnPlaylist" class="btn secondary btn-solution" type="button">▶ Playlist</button>
+    <button id="btnPlaylistStop" class="btn secondary btn-solution" type="button">⏹ Stop</button>
+      <button id="btnPlaylistPause" class="btn secondary btn-solution" type="button">⏸ Pause</button>
+<button id="btnPlaylistNext" class="btn secondary btn-solution" type="button">⏭ Vor</button>
+    <span id="progress">0 / 0 gelöst</span>
+  </div>
+</header>
+
+
+<main>
+  <div class="map-wrap" id="mapWrap">
+  <div class="map-inner" id="mapInner">
+    <img id="mapImage" class="street-image" src="strasse.jpg" alt="Unsere Straße" />
+    <svg id="overlay" class="overlay" aria-label="Interaktive Flächen"></svg>
+    <canvas id="fx" class="fx"></canvas>
+  </div>
+  <div id="tooltip" class="tooltip" role="status" aria-live="polite"></div>
+  <button id="btnMute" class="mute-btn" type="button" aria-pressed="false">🔊 Ton an</button>
+</div>
+</main>
+
+
+
+
+
+
+<!-- Modal: startet geschlossen -->
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal" id="quizModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+    <div class="modal-header" id="modalHeader" title="Fenster verschieben">
+      <h2 id="modalTitle">Frage</h2>
+      <button id="btnCloseX" class="icon-btn" type="button" aria-label="Schließen">×</button>
+    </div>
+
+    <div class="modal-body">
+      <p id="modalQuestion" class="question"></p>
+
+      <!-- Single answer -->
+      <div id="singleAnswer">
+        <label class="label" for="answerInput">Deine Antwort:</label>
+        <input id="answerInput" class="input" type="text" autocomplete="off" />
+      </div>
+
+      <!-- Multi answer (Hausbelegung) -->
+      <div id="multiAnswer" hidden>
+        <div class="label">Hausbelegung:</div>
+        <div id="multiGrid" class="multi-grid"></div>
+      </div>
+
+      <div id="hintBox" class="hint" hidden></div>
+      <div id="resultBox" class="result" hidden></div>
+    </div>
+
+    <div class="modal-actions">
+      <div class="left-actions">
+        <button id="btnHint" class="btn secondary" type="button">Tipp</button>
+        <button id="btnReveal" class="btn secondary" type="button">Auflösen</button>
+      </div>
+      <div class="right-actions">
+        <button id="btnCancel" class="btn secondary" type="button">Schließen</button>
+        <button id="btnCheck" class="btn" type="button">Antwort prüfen</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
