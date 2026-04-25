@@ -875,7 +875,7 @@ const HOTSPOTS = [
     ],
     "hint": "Der Vater konnte gut laufen",
     "revealComment": "",
-    "revealImage": "kauf.png"
+    "revealImage": "Kauf.png"
   },
   {
     "id": "12",
