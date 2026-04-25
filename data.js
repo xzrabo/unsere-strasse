@@ -200,7 +200,7 @@ const HOTSPOTS = [
     ],
     "hint": "Das war eine beliebte Beschäftigung bei Kindern in der Zeit",
     "revealComment": "Seine schönen bunten Glasmurmeln hat man gehütet wie Schätze. Aber damals gab es auch noch Tonmurmeln. Die waren kleiner und viel billiger",
-    "revealImage": "pics/strom.png"
+    "revealImage": "pics/Strom.png"
   },
   {
     "id": "y",
@@ -231,7 +231,7 @@ const HOTSPOTS = [
     ],
     "hint": "...damit ist nicht unsere Garage gemeint",
     "revealComment": "Man kann sich nicht an alles erinnern...",
-    "revealImage": "pics/garage.png"
+    "revealImage": "pics/Garage.png"
   },
   {
     "id": "z",
@@ -875,7 +875,7 @@ const HOTSPOTS = [
     ],
     "hint": "Der Vater konnte gut laufen",
     "revealComment": "",
-    "revealImage": "pics/kauf.png"
+    "revealImage": "pics/Kauf.png"
   },
   {
     "id": "12",
@@ -1181,7 +1181,7 @@ const HOTSPOTS = [
         "hint": "1-2 Söhne und eine Tochter",
         "solution": "'Zigeunerfamilie' mit nervigen bissigen Hunden, die die Söhne Kai und Ulf einem auch gerne mal auf den Hals gehetzt haben, wenn man ihre kleine Schwester Iris geärgert hatte (haben wir aber trotzdem getan)",
         "revealComment": "",
-        "revealImage": "pics/iris.png"
+        "revealImage": "pics/Iris.png"
       },
       {
         "key": "2OG",
