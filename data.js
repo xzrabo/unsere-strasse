@@ -169,7 +169,7 @@ const HOTSPOTS = [
     ],
     "hint": "Hier hat ALLES stattgefunden...",
     "revealComment": "",
-    "revealImage": "pics/Strasse.png"
+    "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/strasse.png"
   },
   {
     "id": "x",
@@ -200,7 +200,7 @@ const HOTSPOTS = [
     ],
     "hint": "Das war eine beliebte Beschäftigung bei Kindern in der Zeit",
     "revealComment": "Seine schönen bunten Glasmurmeln hat man gehütet wie Schätze. Aber damals gab es auch noch Tonmurmeln. Die waren kleiner und viel billiger",
-    "revealImage": "pics/strom.png"
+    "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/strom.png"
   },
   {
     "id": "y",
@@ -231,7 +231,7 @@ const HOTSPOTS = [
     ],
     "hint": "...damit ist nicht unsere Garage gemeint",
     "revealComment": "Man kann sich nicht an alles erinnern...",
-    "revealImage": "pics/garage.png"
+    "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/garage.png"
   },
   {
     "id": "z",
@@ -410,7 +410,7 @@ const HOTSPOTS = [
     ],
     "hint": "Hier waren Schilder im Vorgarten aufgestellt",
     "revealComment": "",
-    "revealImage": "pics/4.png"
+    "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/4.png"
   },
   {
     "id": "7",
@@ -547,7 +547,7 @@ const HOTSPOTS = [
     ],
     "hint": "Konnte nicht parken",
     "revealComment": "",
-    "revealImage": "pics/Sawicki.png"
+    "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/sawicki.png"
   },
   {
     "id": "11",
@@ -606,7 +606,7 @@ const HOTSPOTS = [
         "hint": "Vorliebe für Zäpfchen",
         "solution": "Familie Marx mit ihrem Sohn Haidger. Unglaublich, was aus den Menschen werden kann (https://heidgermarx.com/about) heute ein erfolgreicher Photograf, der in New York ausstellt. Und damals sind wir noch mit seinen Eltern durchs Rotbachtal gewandert und er hat mich beim Briefmarkentauschen betuppt, naja. Die Familie ist später in den Fasanenweg gezogen. Dennoch wohnte hier ganz am Anfang Familie May mit Sohn (Tobias?), die dann nach Schermbeck oder Gahlen weggezogen sind",
         "revealComment": "",
-        "revealImage": "pics/MayMarx.png"
+        "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/maymarx.png"
       }
     ],
     "revealImage": ""
@@ -668,7 +668,7 @@ const HOTSPOTS = [
         "hint": "Hulli Trulli",
         "solution": "Ehepaar Klein-Wiele mit den Söhnen Felix, Franz und Martin. Franz und Martin (heute Prof. Dipl.-Ing. Martin Klein-Wiele) beide an der Peter Behrens School of Arts in Düsseldorf im Fachbereich Architektur & Design tätig. Felix war ein Elektronikfreak.",
         "revealComment": "",
-        "revealImage": "pics/KW.png"
+        "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/kw.png"
       }
     ],
     "revealImage": ""
@@ -780,7 +780,7 @@ const HOTSPOTS = [
         "hint": "na also...",
         "solution": "Die einzig wahren Büttgens- 'Zentrum' der Matthias-Claudius Strasse. Von unserem Balkon aus konnten wir sehen, wenn Papa morgens zur Arbeit fuhr oder welche Freunde gerade auf der Strasse waren. Aus unseren Zimmern konnten wir auf weite Felder blicken und uns treiben lassen.",
         "revealComment": "",
-        "revealImage": "pics/22.png"
+        "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/22.png"
       }
     ],
     "multiLayout": "floors",
@@ -844,7 +844,7 @@ const HOTSPOTS = [
     ],
     "hint": "Der Vater war Architekt",
     "revealComment": "",
-    "revealImage": "pics/Dirk.jpg"
+    "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/dirk.jpg"
   },
   {
     "id": "10",
@@ -1094,7 +1094,7 @@ const HOTSPOTS = [
         "hint": "Ein reiner Frauenhaushalt",
         "solution": "Hildebrand, Katja, Kirsten, Bettina und Petra. Ich bin mir nicht sicher, aber die hatten glaube ich auch einen Bruder, der aber bei seinem Vater lebte. Der sah genauso aus wie Katja, nur mit Schnäuzer",
         "revealComment": "",
-        "revealImage": "pics/Bettina.png"
+        "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/bettina.png"
       },
       {
         "key": "2OG_L",
@@ -1105,7 +1105,7 @@ const HOTSPOTS = [
         "hint": "Die Tochter ging auf die Gesamtschule in Gladbeck",
         "solution": "Anette mit ihrem kleinen Bruder Tom. Anette war ein richtiges Miststück und hatte damals schon lange Fingernägel. Der Vater hat bei Karstadt gearbeitet",
         "revealComment": "",
-        "revealImage": "pics/Muschner.png"
+        "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/muschner.png"
       },
       {
         "key": "2OG_R",
@@ -1181,7 +1181,7 @@ const HOTSPOTS = [
         "hint": "1-2 Söhne und eine Tochter",
         "solution": "'Zigeunerfamilie' mit nervigen bissigen Hunden, die die Söhne Kai und Ulf einem auch gerne mal auf den Hals gehetzt haben, wenn man ihre kleine Schwester Iris geärgert hatte (haben wir aber trotzdem getan)",
         "revealComment": "",
-        "revealImage": "pics/iris.png"
+        "revealImage": "https://xzrabo.github.io/unsere-strasse/pics/iris.png"
       },
       {
         "key": "2OG",
